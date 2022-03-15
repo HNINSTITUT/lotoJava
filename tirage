@@ -1,0 +1,21 @@
+// tip: each public class is put in its own file
+public class main
+{
+    // tip: arguments are passed via the field below this editor
+    public static void main(String[] args)
+    {
+        int randomNum, nbValides = 0; boolean[] tirage = new boolean[49];
+        
+        System.out.println("Pascal Tirage du loto : ");
+        for (int i = 0; i < 6; i++) {
+           randomNum = (int)(Math.random() * 50);  // 0 to 49
+           if (tirage[randomNum] != true)
+                {
+                    tirage[randomNum] = true;
+                    nbValides++;
+                }
+
+           System.out.println("Numéro : " + randomNum) ;
+        }
+    }
+}
